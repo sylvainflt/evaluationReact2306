@@ -19,24 +19,47 @@ export const initialState = {
   
   const expenseReducer = (state = initialState, action) => {
     switch (action.type) {
-      case 'ADD_EXPENSE':
-        const { title, category, amount } = action.payload;
-        const newExpense = {
-          title,
-          category,
-          amount
-        };
-        const updatedExpenses = [...state.expenses, newExpense];
-        const updatedTotalExpenses = state.totalExpenses + parseFloat(amount);
-        const updatedCategoryExpenses = { ...state.categoryExpenses };
-        updatedCategoryExpenses[category] += parseFloat(amount);
-  
-        return {
-          ...state,
-          expenses: updatedExpenses,
-          totalExpenses: updatedTotalExpenses,
-          categoryExpenses: updatedCategoryExpenses
-        };
+      
+       case 'changeValueTitre' :  
+
+            const expWithTitle = {...state.expense}
+            expWithTitle.titre = action.payload
+            return {
+                ...state,
+                expense: expWithTitle
+            }
+
+        case 'UPDATE_EXPENSE':
+            const { index, newTitle, newCategory, newAmount } = action.payload;
+            const updatedExpenses = [...state.expenses];
+            if (index >= 0 && index < updatedExpenses.length) {
+                updatedExpenses[index] = {
+                ...updatedExpenses[index],
+                title: newTitle,
+                category: newCategory,
+                amount: newAmount
+                }}
+                return     
+
+        case 'ADD_EXPENSE':
+            const { title, category, amount } = action.payload;
+            const newExpense = {
+            title,
+            category,
+            amount
+            };
+            const updatedExpenses2 = [...state.expenses, newExpense];
+            const updatedTotalExpenses = state.totalExpenses + parseFloat(amount);
+            const updatedCategoryExpenses = { ...state.categoryExpenses };
+            updatedCategoryExpenses[category] += parseFloat(amount);
+    
+            return {
+            ...state,
+            expenses: updatedExpenses2,
+            totalExpenses: updatedTotalExpenses,
+            categoryExpenses: updatedCategoryExpenses
+            };
+
       default:
         return state;
     }
