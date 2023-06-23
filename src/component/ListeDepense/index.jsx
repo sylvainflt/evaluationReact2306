@@ -33,7 +33,7 @@ function ListeDepense () {
             <hr/>
             <div className="depense">
                 <h2>Totaux : </h2>
-                <span>{state.totalExpenses}</span>
+                <span>{state.totalExpenses}€</span>
                 
                 <div>
 
@@ -43,18 +43,13 @@ function ListeDepense () {
                             (item, key) => 
                                 <div key={key} className="sousTotal">
                                     <span>{item}</span>
-                                    <span>{state.categoryExpenses[item]}</span>
+                                    <span>{state.categoryExpenses[item]}€</span>
                                 </div>
                         )
-                        
-                        
+                                                
                     }
                     
-                </div>
-                
-                
-                
-                
+                </div>                                                                
             </div>
         </div>
     )

@@ -10,7 +10,7 @@ function Depense ({value}) {
         <li>
             <div className="depense">
                 <span>{titre}</span>
-                <span>{montant}</span>
+                <span>{montant}€</span>
                 <span>{categorie}</span>
 
                 <button className="listButton" onClick={() => dispatch({type: 'removeItem', payload: value})}>X</button>

@@ -30,7 +30,7 @@ function AjoutDepense () {
                 
             <div>
                 <span>Montant</span>
-                <input value={montant} onChange={handleChangeMontant} />
+                <input value={montant} onChange={handleChangeMontant} />€
             </div>
                 
             <div>
