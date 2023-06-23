@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import {ListeDepenseContext} from "../../utils/context/ListeDepenseContext"
-
+import AjoutDepense from "../AjoutDepense"
 
 function ListeDepense () {
 
@@ -13,7 +13,7 @@ function ListeDepense () {
 
             <ul>
                 {
-                    state.listeDepense.map(
+                    state.expenses.map(
                         (item, key) => <Depense key={key} value={item}/>
                     )    
                 }

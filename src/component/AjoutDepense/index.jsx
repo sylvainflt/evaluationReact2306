@@ -5,9 +5,7 @@ function AjoutDepense () {
 
     const [state, dispatch] = useContext(ListeDepenseContext)
 
-    const {titre} = state.item
-    const {montant} = state.item
-    const {categorie} = state.item
+    const {titre, montant, categorie} = state.expense
 
     const handleChangeTitre = (event) => {
         const {value} = event.target
@@ -39,7 +37,7 @@ function AjoutDepense () {
                 <option value="Autres">Autres</option>
             </select> 
          
-            <button onClick={() => dispatch({type: 'addItem'})}>ajouter</button>
+            <button onClick={() => dispatch({type: 'ADD_EXPENSE'})}>ajouter</button>
           
         </>
     )
