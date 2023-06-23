@@ -1,3 +1,9 @@
+const initExpense = {
+    titre: "",
+    montant: 0,
+    categorie: "Alimentation"
+}
+
 export const initialState = {
     expenses: [],
     totalExpenses: 0,
@@ -10,11 +16,7 @@ export const initialState = {
         Education: 0,
         Autres: 0
     },
-    expense: {
-        titre: "",
-        montant: 0,
-        categorie: "Alimentation"
-    }
+    expense: initExpense
   };
   
   const expenseReducer = (state = initialState, action) => {
@@ -61,7 +63,8 @@ export const initialState = {
             ...state,
             expenses: updatedExpenses2,
             totalExpenses: updatedTotalExpenses,
-            categoryExpenses: updatedCategoryExpenses
+            categoryExpenses: updatedCategoryExpenses,
+            expense: initExpense
             };
 
         case 'removeItem':

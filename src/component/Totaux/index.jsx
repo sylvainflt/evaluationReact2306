@@ -7,7 +7,7 @@ function Totaux () {
     const categoryExpenses = Object.keys(state.categoryExpenses)
 
     return (
-        <div className="depense">
+        <div className="totaux">
             <h2>Totaux : </h2>
             <span>{state.totalExpenses}€</span>
 

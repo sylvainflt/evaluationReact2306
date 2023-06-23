@@ -64,7 +64,13 @@ body {
   align-items: center;
   gap: 20px;
 }
-
+.totaux {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-left: 80px;
+  padding-top: 20px;
+}
 span {
   margin: 0 2em;
 }
@@ -97,6 +103,7 @@ select {
   color: #fff;
   border: none;
   margin: .5em 0;
+  padding: .5em .9em;
   transition: .5s ease-in-out;
 }
 
@@ -127,4 +134,8 @@ h1 {
 .sousTotal {
   display: flex;
   justify-content: space-between;
+}
+
+.depense-categorie {
+  width: 20%;
 }

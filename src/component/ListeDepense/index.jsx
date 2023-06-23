@@ -13,7 +13,7 @@ function ListeDepense () {
             <hr/>                       
             
             <div style={{display:"flex"}}>
-                <div style={{minWidth:"500px"}}>
+                <div style={{minWidth:"600px"}}>
                     <h2>Liste : </h2>
                     <ul>
                         {

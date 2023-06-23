@@ -9,9 +9,9 @@ function Depense ({value}) {
     return (
         <li>
             <div className="depense">
-                <span>{titre}</span>
+                <span style={{width:"30%", textAlign:"left"}}>{titre}</span>
                 <span>{montant}€</span>
-                <span>{categorie}</span>
+                <span className="depense-categorie">{categorie}</span>
 
                 <button className="listButton" onClick={() => dispatch({type: 'removeItem', payload: value})}>X</button>
             </div>
