@@ -28,30 +28,34 @@ export const initialState = {
                 ...state,
                 expense: expWithTitle
             }
+            
+        case 'changeValueMontant' :
+            const expWithExpense = {...state.expense}
+            expWithExpense.montant = action.payload
+            return {
+                ...state,
+                expense: expWithExpense
+            }
 
-        case 'UPDATE_EXPENSE':
-            const { index, newTitle, newCategory, newAmount } = action.payload;
-            const updatedExpenses = [...state.expenses];
-            if (index >= 0 && index < updatedExpenses.length) {
-                updatedExpenses[index] = {
-                ...updatedExpenses[index],
-                title: newTitle,
-                category: newCategory,
-                amount: newAmount
-                }}
-                return     
+        case 'changeValueCategorie' :
+            const expWithCategory = {...state.expense}
+            expWithCategory.categorie = action.payload
+            return {
+                ...state,
+                expense: expWithCategory
+            }         
 
         case 'ADD_EXPENSE':
-            const { title, category, amount } = action.payload;
+            const { titre, categorie, montant } = action.payload;
             const newExpense = {
-            title,
-            category,
-            amount
+                titre,
+                categorie,
+                montant
             };
             const updatedExpenses2 = [...state.expenses, newExpense];
-            const updatedTotalExpenses = state.totalExpenses + parseFloat(amount);
+            const updatedTotalExpenses = state.totalExpenses + parseFloat(montant);
             const updatedCategoryExpenses = { ...state.categoryExpenses };
-            updatedCategoryExpenses[category] += parseFloat(amount);
+            updatedCategoryExpenses[categorie] += parseFloat(montant);
     
             return {
             ...state,

@@ -37,7 +37,7 @@ function AjoutDepense () {
                 <option value="Autres">Autres</option>
             </select> 
          
-            <button onClick={() => dispatch({type: 'ADD_EXPENSE'})}>ajouter</button>
+            <button onClick={() => dispatch({type: 'ADD_EXPENSE', payload: state.expense})}>ajouter</button>
           
         </>
     )

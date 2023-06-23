@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import {ListeDepenseContext} from "../../utils/context/ListeDepenseContext"
 import AjoutDepense from "../AjoutDepense"
+import Depense from "../Depense"
 
 function ListeDepense () {
 
