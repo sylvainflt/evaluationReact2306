@@ -64,8 +64,15 @@ export const initialState = {
             categoryExpenses: updatedCategoryExpenses
             };
 
-      default:
-        return state;
+        case 'removeItem':
+            const newItems = state.expenses.filter((item) => item !== action.payload)
+            return {
+                ...state,
+                expenses: newItems
+            }
+
+        default:
+            return state;
     }
   };
   

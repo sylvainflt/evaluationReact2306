@@ -22,7 +22,7 @@ function AjoutDepense () {
 
 
     return (
-        <>
+        <div>
             <div>
                 <span>Titre</span>
                 <input value={titre} onChange={handleChangeTitre} />
@@ -49,7 +49,7 @@ function AjoutDepense () {
             
             <button className="buttons" onClick={() => dispatch({type: 'ADD_EXPENSE', payload: state.expense})}>ajouter</button>
             
-        </>
+        </div>
     )
 }
 

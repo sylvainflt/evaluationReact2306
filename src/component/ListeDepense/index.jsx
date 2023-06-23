@@ -10,19 +10,25 @@ function ListeDepense () {
 
     return (
         <div>            
-            <hr/>
-            <h2>Ajouter une dépense : </h2>
-            <AjoutDepense />            
-            <hr/>
-            <div>
-                <h2>Liste : </h2>
-                <ul>
-                    {
-                        state.expenses.map(
-                            (item, key) => <Depense key={key} value={item}/>
-                        )    
-                    }
-                </ul>
+            <hr/>                       
+            
+            <div style={{display:"flex"}}>
+                <div style={{minWidth:"500px"}}>
+                    <h2>Liste : </h2>
+                    <ul>
+                        {
+                            state.expenses.map(
+                                (item, key) => <Depense key={key} value={item}/>
+                            )    
+                        }
+                    </ul>
+                </div>
+                
+                <div style={{borderLeft:"1px solid #fff"}}>
+                    <h2>Ajouter une dépense : </h2>
+                    <AjoutDepense /> 
+                </div>
+                
             </div>
             <hr/>
             <div className="depense">
