@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import {ListeDepenseContext} from "../../utils/context/ListeDepenseContext"
+import "./index.css"
 
 function AjoutDepense () {
 

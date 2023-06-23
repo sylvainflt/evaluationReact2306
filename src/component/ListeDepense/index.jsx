@@ -3,6 +3,7 @@ import {ListeDepenseContext} from "../../utils/context/ListeDepenseContext"
 import AjoutDepense from "../AjoutDepense"
 import Depense from "../Depense"
 import Totaux from "../Totaux"
+import "./index.css"
 
 function ListeDepense () {
 
