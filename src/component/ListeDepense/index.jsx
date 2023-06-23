@@ -10,10 +10,10 @@ function ListeDepense () {
 
     return (
         <div>            
-            
+            <hr/>
             <h2>Ajouter une dépense : </h2>
             <AjoutDepense />            
-
+            <hr/>
             <div>
                 <h2>Liste : </h2>
                 <ul>
@@ -24,6 +24,7 @@ function ListeDepense () {
                     }
                 </ul>
             </div>
+            <hr/>
             <div className="depense">
                 <h2>Totaux : </h2>
                 <span>{state.totalExpenses}</span>

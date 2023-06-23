@@ -2,18 +2,18 @@ export const initialState = {
     expenses: [],
     totalExpenses: 0,
     categoryExpenses: {
-      food: 0,
-      housing: 0,
-      transportation: 0,
-      entertainment: 0,
-      health: 0,
-      education: 0,
-      others: 0
+        Alimentation: 0,
+        Logement: 0,
+        Transport: 0,
+        Divertissement: 0,
+        Santé: 0,
+        Éducation: 0,
+        Autres: 0
     },
     expense: {
         titre: "",
         montant: 0,
-        categorie: "food"
+        categorie: "Alimentation"
     }
   };
   
