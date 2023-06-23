@@ -123,3 +123,8 @@ h1 {
       transform: translateY(0);
     }
 }
+
+.sousTotal {
+  display: flex;
+  justify-content: space-between;
+}

@@ -41,7 +41,7 @@ function ListeDepense () {
                         
                         categoryExpenses.map(
                             (item, key) => 
-                                <div key={key}>
+                                <div key={key} className="sousTotal">
                                     <span>{item}</span>
                                     <span>{state.categoryExpenses[item]}</span>
                                 </div>

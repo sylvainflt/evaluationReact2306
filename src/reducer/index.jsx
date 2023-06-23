@@ -7,7 +7,7 @@ export const initialState = {
         Transport: 0,
         Divertissement: 0,
         Santé: 0,
-        Éducation: 0,
+        Education: 0,
         Autres: 0
     },
     expense: {
@@ -65,10 +65,17 @@ export const initialState = {
             };
 
         case 'removeItem':
+            const categorie2 = action.payload.categorie
+            const montant2 = action.payload.montant
             const newItems = state.expenses.filter((item) => item !== action.payload)
+            const updatedTotalExpenses2 = state.totalExpenses - parseFloat(montant2);
+            const updatedCategoryExpenses2 = { ...state.categoryExpenses };
+            updatedCategoryExpenses2[categorie2] -= parseFloat(montant2);
             return {
                 ...state,
-                expenses: newItems
+                expenses: newItems,
+                totalExpenses: updatedTotalExpenses2,
+                categoryExpenses: updatedCategoryExpenses2
             }
 
         default:
