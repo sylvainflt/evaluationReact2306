@@ -8,11 +8,14 @@ function Depense ({value}) {
    
     return (
         <li>
-            <span>{titre}</span>
-            <span>{montant}</span>
-            <span>{categorie}</span>
+            <div className="depense">
+                <span>{titre}</span>
+                <span>{montant}</span>
+                <span>{categorie}</span>
+
+                <button className="listButton" onClick={() => dispatch({type: 'removeItem', payload: value})}>X</button>
+            </div>
             
-            <button onClick={() => dispatch({type: 'removeItem', payload: value})}>X</button>
         </li>
     )
 }
