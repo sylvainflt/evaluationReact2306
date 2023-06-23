@@ -23,22 +23,32 @@ function AjoutDepense () {
 
     return (
         <>
-            <input value={titre} onChange={handleChangeTitre} />
-
-            <input value={montant} onChange={handleChangeMontant} />
-
-            <select value={categorie} onChange={handleChangeCategorie}>
-                <option value="Alimentation">Alimentation</option>
-                <option value="Logement">Logement</option>
-                <option value="Transport">Transport</option>
-                <option value="Divertissement">Divertissement</option>
-                <option value="Santé">Santé</option>
-                <option value="Education">Education</option>
-                <option value="Autres">Autres</option>
-            </select> 
-         
-            <button onClick={() => dispatch({type: 'ADD_EXPENSE', payload: state.expense})}>ajouter</button>
-          
+            <div>
+                <span>Titre</span>
+                <input value={titre} onChange={handleChangeTitre} />
+            </div>
+                
+            <div>
+                <span>Montant</span>
+                <input value={montant} onChange={handleChangeMontant} />
+            </div>
+                
+            <div>
+                <span>Catégorie</span>
+                <select value={categorie} onChange={handleChangeCategorie}>
+                    <option value="Alimentation">Alimentation</option>
+                    <option value="Logement">Logement</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Divertissement">Divertissement</option>
+                    <option value="Santé">Santé</option>
+                    <option value="Education">Education</option>
+                    <option value="Autres">Autres</option>
+                </select>
+            </div>
+                
+            
+            <button className="buttons" onClick={() => dispatch({type: 'ADD_EXPENSE', payload: state.expense})}>ajouter</button>
+            
         </>
     )
 }

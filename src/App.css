@@ -40,3 +40,21 @@
 .read-the-docs {
   color: #888;
 }
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons {
+  background: cyan;
+  margin: 0 2em;
+  color: #000;
+  border: none;
+  transition: 0.5s ease-in-out;
+}
+
+.buttons:hover {
+  background-color: #fff;
+  border: 1px solid #000;
+}

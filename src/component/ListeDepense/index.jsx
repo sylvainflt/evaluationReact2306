@@ -10,8 +10,10 @@ function ListeDepense () {
     return (
         <div>            
             
+            <h2>Ajouter une dépense : </h2>
             <AjoutDepense />            
 
+            <h2>Liste : </h2>
             <ul>
                 {
                     state.expenses.map(
