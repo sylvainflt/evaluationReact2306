@@ -13,8 +13,8 @@ function ListeDepense () {
         <div>            
             <hr/>                       
             
-            <div style={{display:"flex"}}>
-                <div style={{minWidth:"600px"}}>
+            <div style={{display:"flex",flexDirection:"column"}}>
+                <div /*style={{minWidth:"600px"}}*/>
                     <h2>Liste : </h2>
                     <ul>
                         {
@@ -25,7 +25,7 @@ function ListeDepense () {
                     </ul>
                 </div>
                 
-                <div style={{borderLeft:"1px solid #fff"}}>
+                <div /*style={{borderLeft:"1px solid #fff"}}*/>
                     <h2>Ajouter une dépense : </h2>
                     <AjoutDepense /> 
                 </div>
