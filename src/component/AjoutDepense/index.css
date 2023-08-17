@@ -33,3 +33,9 @@
     outline: none;
     transition: .5s ease-in-out;
   }
+
+  .ligneAjout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }

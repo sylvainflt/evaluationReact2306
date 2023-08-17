@@ -13,16 +13,22 @@ function ListeDepense () {
         <div>            
             <hr/>                       
             
-            <div style={{display:"flex",flexDirection:"column"}}>
+            <div style={{display:"flex",justifyContent:"center",flexWrap:"wrap",gap:"2rem"}}>
                 <div /*style={{minWidth:"600px"}}*/>
-                    <h2>Liste : </h2>
-                    <ul>
+                    
+                    <h2>
+                        {
+                            state.expenses.length ? "Liste :" : "" 
+                        }
+                    </h2>
+
+                    <ol>
                         {
                             state.expenses.map(
                                 (item, key) => <Depense key={key} value={item}/>
                             )    
                         }
-                    </ul>
+                    </ol>
                 </div>
                 
                 <div /*style={{borderLeft:"1px solid #fff"}}*/>

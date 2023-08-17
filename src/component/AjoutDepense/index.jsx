@@ -23,18 +23,18 @@ function AjoutDepense () {
 
 
     return (
-        <div>
-            <div>
+        <div style={{marginTop:"2rem"}}>
+            <div className="ligneAjout">
                 <span>Titre</span>
                 <input value={titre} onChange={handleChangeTitre} />
             </div>
                 
-            <div>
+            <div className="ligneAjout" style={{width:"107%"}}>
                 <span>Montant</span>
                 <input value={montant} onChange={handleChangeMontant} />€
             </div>
                 
-            <div>
+            <div className="ligneAjout">
                 <span>Catégorie</span>
                 <select value={categorie} onChange={handleChangeCategorie}>
                     <option value="Alimentation">Alimentation</option>
